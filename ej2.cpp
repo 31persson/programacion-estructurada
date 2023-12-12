@@ -5,7 +5,7 @@
 union Datos {
     int entero;
     float flotante;
-    std::string cadena;
+    char cadena[50];  // Usar un arreglo de caracteres en lugar de std::string
 };
 
 int main() {
@@ -19,7 +19,8 @@ int main() {
     miUnion.flotante = 3.14f;
     std::cout << "Valor flotante: " << miUnion.flotante << "\n";
 
-    miUnion.cadena = "Hola, mundo!";
+    // Usar strcpy para asignar un valor a cadena
+    std::strcpy(miUnion.cadena, "Hola, mundo!");
     std::cout << "Valor de cadena: " << miUnion.cadena << "\n";
 
     return 0;
