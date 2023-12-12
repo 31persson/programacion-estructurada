@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <cstring>  // Incluir la cabecera para strcpy
 
 // Definición de la unión Datos
 union Datos {
